@@ -7,7 +7,7 @@ This technique uses the Windows COM to abuse the usage of existing Task Schedule
 1. Task Scheduler calls a CLSID
 2. Registry lookup occurs in HKEY_LOCAL_MACHINE\Software\Classes\CLSID\{CLSID}
 3. the LocalServer32 key's default value contains the executable path or commandline
-4 Svchost.exe will invoke it as commandline
+4. Svchost.exe will invoke it as commandline ( it will not bypass prefetch, since task scheduler does not invoke it )
 
 **Key Characteristics**
 No .exe References, only the CSLID inside the task
